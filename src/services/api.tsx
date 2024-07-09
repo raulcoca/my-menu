@@ -67,7 +67,7 @@ export const getMealTypes = async (): Promise<MealType[]> => {
     }
 };
 
-export const createNewMeal = async (meal: { data: Meal }): Promise<Meal> => {
+export const createNewMeal = async (meal: Meal): Promise<Meal> => {
     try {
         const response = await axios.post(`${MEALS_API_URL}meals`, meal);
         return response.data;
