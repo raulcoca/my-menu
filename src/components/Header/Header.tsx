@@ -7,9 +7,6 @@ function Header() {
     const navigate = useNavigate();
     const user = useSelector((state: { user: User }) => state.user);
     const dispatch = useDispatch();
-    console.log(user);
-
-
 
     const handleLogout = () => {
         // setUserData(null);

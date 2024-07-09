@@ -32,7 +32,6 @@ export default function CreateMeal({ mealTypes }: Props) {
 
     const handleSelect = (ev: ChangeEvent<HTMLSelectElement>) => {
         const { id, value } = ev.target;
-        console.log(mealTypes.find((mealType) => mealType.id == parseInt(value)));
 
         setNewMeal({
             ...newMeal, [id]: mealTypes.find((mealType) => mealType.id == parseInt(value))
@@ -51,7 +50,6 @@ export default function CreateMeal({ mealTypes }: Props) {
             createdAt: moment().format('YYYY-MM-DD')
         }
         createNewMeal(mealToAdd).then((data) => {
-            console.log('ESte es el que llega', data);
 
             setNewMeal(INITIAL_STATE)
             dispatch({ type: ADD_MEAL, payload: data })

@@ -16,13 +16,11 @@ import { MealDetail } from './MealDetail/MealDetail'
 import { NotFound } from './NotFound/NotFound'
 
 function App() {
-  console.log(localStorage.getItem('user'));
   const dispatch = useDispatch();
   const dataLocal: User = JSON.parse(localStorage.getItem('user')!);
   moment.locale('es');
 
   dispatch({ type: SET_USER, payload: dataLocal })
-  console.log({ dataLocal });
 
   // useEffect(() => {
   //   if (dataLocal?.token) {
@@ -40,7 +38,6 @@ function App() {
   useEffect(() => {
     getMeals().then((meals) => {
 
-      console.log({ meals });
       dispatch({ type: SET_MEALS, payload: meals })
     })
   }, [])

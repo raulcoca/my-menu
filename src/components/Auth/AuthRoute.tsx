@@ -9,7 +9,7 @@ type Props = {
 function AuthRoute({ component }: Props) {
 
     const user: User = useSelector((state: { user: User }) => state.user);
-    console.log('Auth', user);
+
 
     if (user && user.token) {
         return component;

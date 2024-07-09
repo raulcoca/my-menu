@@ -19,8 +19,6 @@ function Login() {
   const handleForm = (ev: FormEvent<HTMLFormElement>) => {
     ev.preventDefault();
     setLogin(user).then((user) => {
-      console.log(user);
-      console.log('json', JSON.stringify(user));
 
       localStorage.setItem('user', JSON.stringify(user));
       // setUserData(data);

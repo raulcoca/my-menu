@@ -13,7 +13,6 @@ export const MealDetail = ({ }: Props) => {
     if (!meal) {
         navigate('/*');
     }
-    console.log(meal);
 
     return (
         <>
