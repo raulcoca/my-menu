@@ -7,29 +7,42 @@ import Menu from './Menu/Menu'
 import AuthRoute from './Auth/AuthRoute'
 import { User } from '../models/User'
 import { useDispatch } from 'react-redux'
-import { getDataUser } from '../services/api'
-import { DO_LOGOUT, SET_USER } from '../actions/actions'
+import { SET_MEALS, SET_USER } from '../actions/actions'
 import { useEffect } from 'react'
+import { getMeals } from '../services/api'
+import moment from 'moment'
+import 'moment/dist/locale/es';
+import { MealDetail } from './MealDetail/MealDetail'
+import { NotFound } from './NotFound/NotFound'
 
 function App() {
   console.log(localStorage.getItem('user'));
   const dispatch = useDispatch();
   const dataLocal: User = JSON.parse(localStorage.getItem('user')!);
+  moment.locale('es');
 
   dispatch({ type: SET_USER, payload: dataLocal })
   console.log({ dataLocal });
 
+  // useEffect(() => {
+  //   if (dataLocal?.token) {
+
+  //     getDataUser(dataLocal.token).then(user => {
+  //       console.log(user);
+
+  //     }).catch(() => {
+  //       localStorage.removeItem('user');
+  //       dispatch({ type: DO_LOGOUT })
+  //     })
+  //   }
+  // }, [])
+
   useEffect(() => {
-    if (dataLocal?.token) {
+    getMeals().then((meals) => {
 
-      getDataUser(dataLocal.token).then(user => {
-        console.log(user);
-
-      }).catch(() => {
-        localStorage.removeItem('user');
-        dispatch({ type: DO_LOGOUT })
-      })
-    }
+      console.log({ meals });
+      dispatch({ type: SET_MEALS, payload: meals })
+    })
   }, [])
 
 
@@ -49,6 +62,11 @@ function App() {
           element={<AuthRoute component={<Menu />} />}
         />
 
+        <Route
+          path="/detail/:id"
+          element={<AuthRoute component={<MealDetail />} />}
+        />
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
 
 

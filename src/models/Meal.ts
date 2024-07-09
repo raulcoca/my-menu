@@ -2,8 +2,11 @@ export interface Meal {
     createdAt: string;
     name: string;
     img: string;
-    type: number;
+    meal_type: {
+        id: number;
+        name: string;
+    };
     description: string;
     date: string;
-    id: number;
+    id?: number;
 }

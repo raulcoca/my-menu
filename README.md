@@ -1,30 +1,14 @@
-# React + TypeScript + Vite
+# Mis comidas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Muestra un listado de mis comidas ordenadas de menor a menor puediendo agregar nuevas y se ordenará en su posicón.
 
-Currently, two official plugins are available:
+Mi menu y el detalle de las comidas es solo de uso privado haciendo login
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Se podrá filtrar por tipo de comida: Desayuno | Comida | Cena
 
-## Expanding the ESLint configuration
+El endpoint usa para el login es el que vimos en clase - https://dummyjson.com/docs/users
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+    Usuario: emilys
+    Contraseña: emilyspass
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+El endpoint usa para el las comidas es - https://mockapi.io

@@ -1,7 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-function NotFound() {
+export const NotFound = () => {
     return (
         <div>
             <h2>Error 404</h2>
@@ -10,6 +9,4 @@ function NotFound() {
             <Link to="/">Volver al inicio</Link>
         </div>
     );
-}
-
-export default NotFound;
+};
