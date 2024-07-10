@@ -3,13 +3,14 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "homepage": "https://raulcoca.github.io/my-menu",
+    "homepage": "https://raulcoca.github.io/my-menu/",
     "scripts": {
         "dev": "vite",
         "build": "tsc -b && vite build",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview",
-        "deploy": "gh-pages -d build"
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
     },
     "dependencies": {
         "@reduxjs/toolkit": "^2.2.6",
