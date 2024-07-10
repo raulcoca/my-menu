@@ -12,3 +12,5 @@ El endpoint usa para el login es el que vimos en clase - https://dummyjson.com/d
     Contraseña: emilyspass
 
 El endpoint usa para el las comidas es - https://mockapi.io
+
+La url del proyecto es https://raulcoca.github.io/my-menu/
