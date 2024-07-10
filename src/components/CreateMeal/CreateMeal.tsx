@@ -58,7 +58,7 @@ export default function CreateMeal({ mealTypes }: Props) {
 
     return (
         <>
-            <div>Crear comida</div>
+            <h4>Crear comida</h4>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Nombre</label>
                 <input onChange={handleInput} type="text" id='name' value={newMeal.name} /><br />
@@ -68,12 +68,12 @@ export default function CreateMeal({ mealTypes }: Props) {
                 <input onChange={handleInput} type="date" id='date' value={newMeal.date} /><br />
                 <label htmlFor="img">Imagen</label>
                 <input onChange={handleInput} type="text" id='img' value={newMeal.img} /><br />
-                <label htmlFor="meal_type"></label>
+                <label htmlFor="meal_type">Tipo de comida</label>
                 <select onChange={handleSelect} id='meal_type' value={newMeal.meal_type.id}>
                     {mealTypes.map((mealType) => (
                         <option key={mealType.id} value={mealType.id}>{mealType.name}</option>
                     ))}
-                </select><br />
+                </select><br /><br />
                 <button>Crear Comida</button>
             </form>
         </>

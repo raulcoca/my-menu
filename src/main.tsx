@@ -20,5 +20,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <App />
       </BrowserRouter>
     </Provider>
-  </React.Fragment>,
+  </React.Fragment>
 )

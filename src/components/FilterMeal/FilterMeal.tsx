@@ -15,13 +15,17 @@ function FilterMeal({ mealTypes, setSelectedMealType }: Props) {
     }
 
     return (
-        <select onChange={handleChange}>
-            <option value='0'>Selecciona un tipo de comida</option>
-            {mealTypes.map((mealType) => (
-                <option key={mealType.id} value={mealType.id}>{mealType.name}</option>
-            ))
-            }
-        </select>
+        <>
+
+            <h4>Filtar</h4>
+            <select onChange={handleChange}>
+                <option value='0'>Selecciona un tipo de comida</option>
+                {mealTypes.map((mealType) => (
+                    <option key={mealType.id} value={mealType.id}>{mealType.name}</option>
+                ))
+                }
+            </select>
+        </>
     )
 }
 
