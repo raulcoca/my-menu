@@ -42,7 +42,6 @@ function App() {
     })
   }, [])
 
-  console.log(import.meta.env.VITE_PUBLIC);
 
 
   return (
