@@ -11,7 +11,6 @@ import { BrowserRouter } from 'react-router-dom';
 const store = configureStore({ reducer: rootReducer });
 
 
-console.log(import.meta.env.VITE_PUBLIC);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.Fragment>
