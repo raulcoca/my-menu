@@ -1,6 +1,6 @@
 # Mis comidas
 
-Muestra un listado de mis comidas ordenadas de menor a mayor puediendo agregar nuevas y se ordenará en su posicón.
+Muestra un listado de mis comidas ordenadas de menor a mayor pudiendo agregar nuevas comidas y se ordenará en su posición.
 
 Mi menu y el detalle de las comidas es solo de uso privado haciendo login
 
